@@ -2,10 +2,10 @@
 from flask import Blueprint, render_template
 
 # 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
-scrum1_task1 = Blueprint('a40123149_task1', __name__, url_prefix='/ag7', template_folder='templates')
+a40123149_task1 = Blueprint('a40123149_task1', __name__, url_prefix='/ag7', template_folder='templates')
 
 # scrum1_task1 為完整可以單獨執行的繪圖程式
-@scrum1_task1.route('/a40123149_task1')
+@a40123149_task1.route('/a40123149_task1')
 def task1():
     outstring = '''
 <!DOCTYPE html>
