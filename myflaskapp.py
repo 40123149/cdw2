@@ -360,6 +360,8 @@ def download(filename):
 app.register_blueprint(users.s2a.g100.scrum1_task1.scrum1_task1)
 # 註冊 ag100 的 scrum2_task1.py 檔案中的 scrum2_task1 藍圖
 app.register_blueprint(users.s2a.g100.scrum2_task1.scrum2_task1)
+#g7
+app.register_blueprint(users.s2a.g7.a40123149_task1.a40123149_task1)
 #g9
 app.register_blueprint(users.s2a.g9.ag9.ag9)
 app.register_blueprint(users.s2a.g9.ag9_40323132_task1.ag9_40323132)
