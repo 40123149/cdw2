@@ -12,10 +12,8 @@ import init
 # 導入 ag100 所屬的模組
 import users.s2a.g100.scrum1_task1
 import users.s2a.g100.scrum2_task1
-<<<<<<< HEAD
 #g7
 import users.s2a.g7.a40123149_task1
-=======
 #g9
 import users.s2a.g9.ag9
 import users.s2a.g9.ag9_40323132_task1
@@ -24,7 +22,6 @@ import users.s2a.g9.ag9_40323126_task1
 import users.s2a.g9.ag9_40323153_task1
 import users.s2a.g9.ag9_40323149_task1
 import users.s2a.g9.ag9_40323150_task1
->>>>>>> 6622e2381ebb3c6f1116e5bf63096a8d74122ec7
 # 二乙
 #g1
 import s2b_files.task1.g1.task0 as bg1_0
