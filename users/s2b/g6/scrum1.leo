@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
-<?xml-stylesheet ekr_test ?>
 <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
 <globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
@@ -10,12 +9,12 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="450.20160406083718.1"><vh>@edit scrum1_task40323250.py</vh></v>
-<v t="leo.20160414081849.1" a="E"><vh>@path ../../../</vh>
-<v t="leo.20160414081859.1"><vh>@edit myflaskapp.py</vh></v>
+<v t="leo.20160310102708.1"><vh>@edit scrum1_task40323210.py</vh></v>
+<v t="leo.20160310102803.1" a="E"><vh>@path ../../../</vh>
+<v t="leo.20160310102838.1"><vh>@edit myflaskapp.py</vh></v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="leo.20160414081849.1"></t>
+<t tx="leo.20160310102803.1"></t>
 </tnodes>
 </leo_file>
