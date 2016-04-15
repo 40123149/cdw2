@@ -12,6 +12,8 @@ import init
 # 導入 ag100 所屬的模組
 import users.s2a.g100.scrum1_task1
 import users.s2a.g100.scrum2_task1
+#g7
+import users.s2a.g7.a40123149_task1
 # 二乙
 #g1
 import s2b_files.task1.g1.task0 as bg1_0
