@@ -8,30 +8,7 @@ a40123149_task1 = Blueprint('a40123149_task1', __name__, url_prefix='/ag7', temp
 @a40123149_task1.route('/a40123149_task1')
 def task1():
     outstring = '''
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>網際 2D 繪圖</title>
-    <!-- IE 9: display inline SVG -->
-    <meta http-equiv="X-UA-Compatible" content="IE=9">
-<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
 
-</head>
-<body>
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<canvas id="plotarea" width="800" height="800"></canvas>
-
-<script type="text/python">
 from javascript import JSConstructor
 from browser import window
 import math
@@ -73,45 +50,77 @@ def O(x, y, rx, ry, rot, color, border, linewidth):
     # 複製 cmbr, 然後命名為 basic1
     basic1 = cmbr.dup()
     # basic1 轉 120 度
-    basic1.rotate(120)
+    basic1.rotate(30)
+    basic1.translate(10, -37.5)
     basic2 = cmbr.dup()
-    basic2.rotate(60)
+    basic2.rotate(30)
     basic2.translate(0, -20)
     
     basic3 = cmbr.dup()
-    basic3.rotate(60)
-    basic3.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+    basic3.rotate(30)
+    basic3.translate(20, -55)
     
     basic4 = cmbr.dup()
-    basic4.rotate(120)
-    basic4.translate(20*math.cos(30*deg), -20*math.sin(30*deg)-20)
+    basic4.rotate(180)
+    basic4.translate(60, -20)
     
-    basic5 = cmbr.dup()
-    basic5.translate(2*20*math.cos(30*deg), 0)
+    #basic5 = cmbr.dup()
+    #basic5.rotate(90)
+    #basic5.translate(10, -37.5)
+
+    basic6 = cmbr.dup()
+    basic6.rotate(-30)
+    basic6.translate(50, -37.5)
+    
+    #basic7 = cmbr.dup()
+    #basic7.rotate(90)
+    #basic7.translate(10, 37.5)
+    
+    #basic8 = cmbr.dup()
+    #basic8.rotate(48)
+    #basic8.translate(15, 6.5)
+    
+    basic9 = cmbr.dup()
+    basic9.rotate(-30)
+    basic9.translate(60, -20)
+    
+    basic10 = cmbr.dup()
+    basic10.rotate(-30)
+    basic10.translate(40, -55)
+    
+    #basic11 = cmbr.dup()
+    #basic11.rotate(-30)
+    #basic11.translate(60, 40)
+    
+    #basic12 = cmbr.dup()
+    #basic12.rotate(-30)
+    #basic12.translate(50, 22.5)
+
     
     cmbr.appendPath(basic1)
     cmbr.appendPath(basic2)
     cmbr.appendPath(basic3)
     cmbr.appendPath(basic4)
-    cmbr.appendPath(basic5)
+    #cmbr.appendPath(basic5)
+    cmbr.appendPath(basic6)
+    #cmbr.appendPath(basic7)
+    #cmbr.appendPath(basic8)
+    cmbr.appendPath(basic9)
+    cmbr.appendPath(basic10)
+    #cmbr.appendPath(basic11)
+    #cmbr.appendPath(basic12)
     
     # hole 為原點位置
     hole = cobj(shapedefs.circle(4), "PATH")
     cmbr.appendPath(hole)
 
     # 表示放大 3 倍
-    #cgo.render(cmbr, x, y, 3, rot)
+    #cgo.render(cmbr, x, y, 0.5, rot)
     # 放大 5 倍
-    cgo.render(cmbr, x, y, 5, rot)
+    cgo.render(cmbr, x, y, 0.5, rot)
 
 O(0, 0, 0, 0, 0, "lightyellow", True, 4)
-</script>
-<!-- 以協同方式加上 ag100 的 scrum-2 組員所寫的 task1 程式碼 -->
-<script type="text/python" src="/ag100/scrum2_task1"></script>
-<!-- 以協同方式加上 ag100 的  scrum-3 組員所寫的 task1 程式碼 -->
-<!-- <script type="text/python" src="/ag100/scrum3_task1"></script>-->
-</body>
-</html>
+
 '''
     return outstring
     
