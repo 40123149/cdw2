@@ -1,22 +1,3 @@
-# 各組分別在各自的 .py 程式中建立應用程式 (第1步/總共3步)
-from flask import Blueprint, render_template
-
-# 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
-bg9 = Blueprint('bg9', __name__, url_prefix='/bg9', template_folder='templates')
-
-@bg9.route('/task0')
-def task0():
-    return "bg9 task0"
-    
-@bg9.route('/task1')
-def task1():
-    #return "bg9 task1"
-    return render_template('task1.html', var1="來自 bg9 的 task1 變數")
-
-# 展示傳回 Brython 程式
-@bg9.route('/task2')
-def task2():
-    outstring = '''
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +32,21 @@ shapedefs = window.shapeDefs
 obj2d = JSConstructor(window.Obj2D)
 cgo = cango("plotarea")
 
+
+# 設定 SVG 繪圖的格點範圍, 原點位於 (0%, 100%), 也就是原點位於畫布的左上角落點, 而且長與寬的尺寸比例都是 100%
+'''
+cgo.setGridboxSVG(0, cgo.heightPW, 100, cgo.heightPW);
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.
+Calling 'cgo.setGridboxSVG()' with no parameters is equivalent to calling
+cgo.setGridboxSVG(originX, originY, width_scale, height_scale)
+cgo.setGridboxSVG(0, 100, cgo.widthPW, cgo.heightPW)
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.
+另一 Y 向上為正的設定 cgo.setGridboxRHC()
+'''
+#cgo.setGridboxSVG(0, 100, 100, 100)
+# 當使用者沒有設定 cgo.setGridboxSVG() 或 cgo.setGridboxRHC(), 系統採用內定的 cgo.setGridboxRHC()
+# 因為經由 cgo.setGridboxSVG(0, 100, 100, 100) 已經將格點範圍的原點設於畫布的左上角落點
+# 以下的絕對座標設定, 即是將此原點標定為繪圖座標的(-50, -50), 而且畫布的有效座標範圍, 寬為 120, 高也是 120
 cgo.setWorldCoords(-250, -250, 500, 500) 
 
 # 決定要不要畫座標軸線
@@ -63,6 +59,7 @@ cgo.drawAxes(0, 240, 0, 240, {
     "yLabelInterval": 20})
         
 #cgo.drawText("使用 Cango 繪圖程式庫!", 0, 0, {"fontSize":60, "fontWeight": 1200, "lorg":5 })
+
 deg = math.pi/180  
 def O(x, y, rx, ry, rot, color, border, linewidth):
     # 旋轉必須要針對相對中心 rot not working yet
@@ -77,36 +74,42 @@ def O(x, y, rx, ry, rot, color, border, linewidth):
             "border": border,
             "strokeColor": "tan",
             "lineWidth": linewidth })
-  
-
-    cmbr.translate(0, 20)
-   
+    '''
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 120 度
+    basic1.rotate(120)
+    basic2 = cmbr.dup()
+    basic2.rotate(60)
+    basic2.translate(0, -20)
     
+    basic3 = cmbr.dup()
+    basic3.rotate(60)
+    basic3.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(120)
+    basic4.translate(20*math.cos(30*deg), -20*math.sin(30*deg)-20)
+    
+    basic5 = cmbr.dup()
+    basic5.translate(2*20*math.cos(30*deg), 0)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+    cmbr.appendPath(basic5)
     
     # hole 為原點位置
-    #hole = cobj(shapedefs.circle(4), "PATH") 
-    #cmbr.appendPath(hole) 
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    '''
+    # 表示放大 3 倍
+    #cgo.render(cmbr, x, y, 3, rot)
+    # 放大 5 倍
+    cgo.render(cmbr, x, y, 5, rot)
 
-    # 放大 1 倍
-    cgo.render(cmbr, x, y, 1, rot)
-    
 O(0, 0, 0, 0, 0, "lightyellow", True, 4)
 </script>
-
-<script type="text/python" src="http://2016spring-40323250.rhcloud.com/bg9/scrum1_50"></script>
-<script type="text/python" src="http://2016spring-40323250.rhcloud.com/bg9/scrum2_18"></script>
-<script type="text/python" src="http://2016spring-40323250.rhcloud.com/bg9/scrum3_14"></script>
-<script type="text/python" src="http://2016spring-40323250.rhcloud.com/bg9/scrum4_31"></script>
-<script type="text/python" src="http://2016spring-40323250.rhcloud.com/bg9/scrum5_30"></script>
-<script type="text/python" src="http://2016spring-40323250.rhcloud.com/bg9/scrum6_33"></script>
-
-
-
-
-
 </body>
 </html>
-'''
-    return outstring
-    
-

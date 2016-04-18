@@ -2,19 +2,19 @@
 from flask import Blueprint, render_template
 
 # 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
-bg9 = Blueprint('bg9', __name__, url_prefix='/bg9', template_folder='templates')
+bg11 = Blueprint('bg11', __name__, url_prefix='/bg11', template_folder='templates')
 
-@bg9.route('/task0')
+@bg11.route('/task0')
 def task0():
-    return "bg9 task0"
+    return "bg11 task0"
     
-@bg9.route('/task1')
+@bg11.route('/task1')
 def task1():
-    #return "bg9 task1"
-    return render_template('task1.html', var1="來自 bg9 的 task1 變數")
+    #return "bg11 task1"
+    return render_template('task1.html', var1="來自 bg11 的 task1 變數")
 
 # 展示傳回 Brython 程式
-@bg9.route('/task2')
+@bg11.route('/task2')
 def task2():
     outstring = '''
 <!DOCTYPE html>
