@@ -14,14 +14,12 @@ import users.s2a.g100.scrum1_task1
 import users.s2a.g100.scrum2_task1
 #g7
 import users.s2a.g7.a40123149_task1
-#g9
-import users.s2a.g9.ag9
-import users.s2a.g9.ag9_40323132_task1
-import users.s2a.g9.ag9_40323125_task1
-import users.s2a.g9.ag9_40323126_task1
-import users.s2a.g9.ag9_40323153_task1
-import users.s2a.g9.ag9_40323149_task1
-import users.s2a.g9.ag9_40323150_task1
+import users.s2a.g7.a40023234_task1
+import users.s2a.g7.a40123119_task1
+import users.s2a.g7.a40123141_task1
+import users.s2a.g7.a40123216_task1
+import users.s2a.g7.a40123227_task1
+import users.s2a.g7.a40123255_task1
 # 二乙
 #g1
 import s2b_files.task1.g1.task0 as bg1_0
@@ -42,20 +40,9 @@ import users.s2b.g2.scrum2_task40123226
 import users.s2b.g2.scrum2_task40123232
 import users.s2b.g2.scrum2_task40123235
 import users.s2b.g2.scrum2_task40123244
-#g6
-import users.s2b.g6.task0
-import users.s2b.g6.scrum1_task40323210
-#g7
-import users.s2b.g7.task0
-import users.s2b.g7.scrum1_task40323212
-import users.s2b.g7.scrum2_task40323216
-import users.s2b.g7.scrum2_task40323236
 #g9
 import users.s2b.g9.task0
 import users.s2b.g9.scrum1_task40323250
-import users.s2b.g9.scrum2_task40323218
-import users.s2b.g9.scrum3_task40323214
-import users.s2b.g9.scrum4_task40323231
 # 確定程式檔案所在目錄, 在 Windows 有最後的反斜線
 _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
 # 設定在雲端與近端的資料儲存目錄
@@ -362,14 +349,12 @@ app.register_blueprint(users.s2a.g100.scrum1_task1.scrum1_task1)
 app.register_blueprint(users.s2a.g100.scrum2_task1.scrum2_task1)
 #g7
 app.register_blueprint(users.s2a.g7.a40123149_task1.a40123149_task1)
-#g9
-app.register_blueprint(users.s2a.g9.ag9.ag9)
-app.register_blueprint(users.s2a.g9.ag9_40323132_task1.ag9_40323132)
-app.register_blueprint(users.s2a.g9.ag9_40323125_task1.ag9_40323125)
-app.register_blueprint(users.s2a.g9.ag9_40323126_task1.ag9_40323126)
-app.register_blueprint(users.s2a.g9.ag9_40323153_task1.ag9_40323153)
-app.register_blueprint(users.s2a.g9.ag9_40323149_task1.ag9_40323149)
-app.register_blueprint(users.s2a.g9.ag9_40323150_task1.ag9_40323150)
+app.register_blueprint(users.s2a.g7.a40023234_task1.a40023234_task1)
+app.register_blueprint(users.s2a.g7.a40123119_task1.a40123119_task1)
+app.register_blueprint(users.s2a.g7.a40123141_task1.a40123141_task1)
+app.register_blueprint(users.s2a.g7.a40123216_task1.a40123216_task1)
+app.register_blueprint(users.s2a.g7.a40123227_task1.a40123227_task1)
+app.register_blueprint(users.s2a.g7.a40123255_task1.a40123255_task1)
 # 二乙
 #g1
 app.register_blueprint(bg1_0.bg1)
@@ -392,17 +377,8 @@ app.register_blueprint(users.s2b.g2.scrum2_task40123226.scrum2_task40123226)
 app.register_blueprint(users.s2b.g2.scrum2_task40123232.scrum2_task40123232)
 app.register_blueprint(users.s2b.g2.scrum2_task40123235.scrum2_task40123235)
 app.register_blueprint(users.s2b.g2.scrum2_task40123244.scrum2_task40123244)
-#g6
-app.register_blueprint(users.s2b.g6.scrum1_task40323210.scrum1_task40323210)
-#g7
-app.register_blueprint(users.s2b.g7.scrum1_task40323212.scrum1_task40323212)
-app.register_blueprint(users.s2b.g7.scrum2_task40323216.scrum2_task40323216)
-app.register_blueprint(users.s2b.g7.scrum2_task40323236.scrum2_task40323236)
 #g9
 app.register_blueprint(users.s2b.g9.scrum1_task40323250.scrum1_task40323250)
-app.register_blueprint(users.s2b.g9.scrum2_task40323218.scrum2_task40323218)
-app.register_blueprint(users.s2b.g9.scrum4_task40323231.scrum4_task40323231)
-app.register_blueprint(users.s2b.g9.scrum3_task40323214.scrum3_task40323214)
 if __name__ == "__main__":
     app.run()
 
