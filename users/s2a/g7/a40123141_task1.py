@@ -47,29 +47,110 @@ def O(x, y, rx, ry, rot, color, border, linewidth):
             "lineWidth": linewidth })
 
     # 複製 cmbr, 然後命名為 basic1
-    basic1 = cmbr.dup()
-    # basic1 轉 120 度
-    basic1.rotate(120)
-    basic2 = cmbr.dup()
-    basic2.rotate(60)
-    basic2.translate(0, -20)
+#H   
+    basic71 = cmbr.dup()
+    basic71.rotate(180)
+    basic71.translate(180, -110)
+    basic72 = cmbr.dup()
+    basic72.rotate(0)
+    basic72.translate(180, -130)
     
-    basic3 = cmbr.dup()
-    basic3.rotate(60)
-    basic3.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+    basic73 = cmbr.dup()
+    basic73.rotate(0)
+    basic73.translate(180, -70)
     
-    basic4 = cmbr.dup()
-    basic4.rotate(120)
-    basic4.translate(20*math.cos(30*deg), -20*math.sin(30*deg)-20)
+    basic74 = cmbr.dup()
+    basic74.rotate(180)
+    basic74.translate(220,-110)
     
-    basic5 = cmbr.dup()
-    basic5.translate(2*20*math.cos(30*deg), 0)
+    basic75 = cmbr.dup()
+    basic75.rotate(90)
+    basic75.translate(180, -110)
+
+    basic76 = cmbr.dup()
+    basic76.rotate(0)
+    basic76.translate(220, -110)
     
-    cmbr.appendPath(basic1)
-    cmbr.appendPath(basic2)
-    cmbr.appendPath(basic3)
-    cmbr.appendPath(basic4)
-    cmbr.appendPath(basic5)
+    basic77 = cmbr.dup()
+    basic77.rotate(90)
+    basic77.translate(200, -110)
+    
+    basic79 = cmbr.dup()
+    basic79.rotate(180)
+    basic79.translate(220, -90)
+    
+    basic710 = cmbr.dup()
+    basic710.rotate(0)
+    basic710.translate(220, -130)
+    basic711 = cmbr.dup()
+    basic711.rotate(0)
+    basic711.translate(180, -110)
+#I
+    basic81 = cmbr.dup()
+    basic81.rotate(180)
+    basic81.translate(0, 100)
+    basic82 = cmbr.dup()
+    basic82.rotate(0)
+    basic82.translate(0, 80)
+    
+    basic83 = cmbr.dup()
+    basic83.rotate(0)
+    basic83.translate(0, 140)
+    
+    basic84 = cmbr.dup()
+    basic84.rotate(0)
+    basic84.translate(0, 100)
+#J 
+    basic91 = cmbr.dup()
+    basic91.rotate(180)
+    basic91.translate(60, 100)
+    basic92 = cmbr.dup()
+    basic92.rotate(180)
+    basic92.translate(60, 80)
+    
+    basic93 = cmbr.dup()
+    basic93.rotate(0)
+    basic93.translate(60, 140)
+    
+    basic94 = cmbr.dup()
+    basic94.rotate(-90)
+    basic94.translate(50, 62.5)
+    
+    basic95 = cmbr.dup()
+    basic95.rotate(-30)
+    basic95.translate(60, 80)
+    
+    basic99 = cmbr.dup()
+    basic99.rotate(30)
+    basic99.translate(20, 80)
+    basic910 = cmbr.dup()
+    basic910.rotate(30)
+    basic910.translate(20, 80)
+
+#H   
+    cmbr.appendPath(basic71)
+    cmbr.appendPath(basic72)
+    cmbr.appendPath(basic73)
+    cmbr.appendPath(basic74)
+    cmbr.appendPath(basic75)
+    cmbr.appendPath(basic76)
+    cmbr.appendPath(basic77)
+    cmbr.appendPath(basic79)
+    cmbr.appendPath(basic710)
+    cmbr.appendPath(basic711)
+#I   
+    cmbr.appendPath(basic81)
+    cmbr.appendPath(basic82)
+    cmbr.appendPath(basic83)
+    cmbr.appendPath(basic84)
+#J
+    cmbr.appendPath(basic91)
+    cmbr.appendPath(basic92)
+    cmbr.appendPath(basic93)
+    cmbr.appendPath(basic94)
+    cmbr.appendPath(basic95)
+    cmbr.appendPath(basic99)
+    cmbr.appendPath(basic910)
     
     # hole 為原點位置
     hole = cobj(shapedefs.circle(4), "PATH")
